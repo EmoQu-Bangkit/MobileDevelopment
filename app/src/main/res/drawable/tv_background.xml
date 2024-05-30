@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/light_background_yellow_2"/> <!-- Mengisi latar belakang dengan warna tertentu -->
+    <corners android:radius="8dp"/>
+</shape>
