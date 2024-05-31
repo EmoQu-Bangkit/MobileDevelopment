@@ -26,4 +26,10 @@
     <string name="balanced_achiever_condition">A stable week for you, everything almost went according to plan without a significant obstacle.</string>
     <string name="menu_today">Today</string>
     <string name="menu_report">Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_add">Add</string>
+    <string name="today_page">Today Page</string>
+    <string name="report_page">Report Page</string>
+    <string name="add_page">Add Page</string>
 </resources>
