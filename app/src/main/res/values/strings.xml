@@ -30,6 +30,33 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu_add">Add</string>
     <string name="today_page">Today Page</string>
-    <string name="report_page">Report Page</string>
+    <string name="report_page">Report</string>
     <string name="add_page">Add Page</string>
+    <string name="add_activity">Add Activity</string>
+    <string name="day">Day</string>
+    <string name="date">Date</string>
+    <string name="text_my_activities">My Activities</string>
+    <string name="text_activity_mood">Activity Mood</string>
+    <string name="text_activity_time">Time</string>
+    <string name="text_activity_notes">Notes</string>
+    <string name="greeting_moods">Hi, how\'s your activity?</string>
+    <string name="terrible_label">Terrible</string>
+    <string name="bad_label">Bad</string>
+    <string name="okay_label">Okay</string>
+    <string name="good_label">Good</string>
+    <string name="excellent_label">Excellent</string>
+    <string-array name="month_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 </resources>
