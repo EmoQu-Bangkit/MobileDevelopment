@@ -39,7 +39,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/tv_instruction"
         android:layout_gravity="center"
-        tools:ignore="MissingConstraints">
+        tools:ignore="DisableBaselineAlignment,MissingConstraints">
 
         <!-- Terrible Mood -->
         <LinearLayout
@@ -48,7 +48,8 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:layout_width="60dp"
@@ -72,7 +73,8 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:layout_width="60dp"
@@ -96,7 +98,8 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:layout_width="60dp"
@@ -120,7 +123,8 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:layout_width="60dp"
@@ -143,7 +147,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="center"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:layout_width="60dp"
