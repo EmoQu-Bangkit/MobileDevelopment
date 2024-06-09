@@ -7,7 +7,7 @@
     android:background="@color/light_background_main"
     android:paddingVertical="150dp"
     android:paddingHorizontal="16dp"
-    tools:context=".ui.fragment.AddFragment">
+    tools:context=".ui.add.AddFragment">
 
     <TextView
         android:id="@+id/tv_greeting"

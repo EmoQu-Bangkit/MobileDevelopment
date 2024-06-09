@@ -1,4 +1,4 @@
-package com.capstone.emoqu.ui.fragment
+package com.capstone.emoqu.ui.today
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

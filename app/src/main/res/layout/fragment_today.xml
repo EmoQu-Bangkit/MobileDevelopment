@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_solid_yellow_9"
-    tools:context=".ui.fragment.TodayFragment">
+    tools:context=".ui.today.TodayFragment">
 
     <TextView
         android:layout_width="match_parent"

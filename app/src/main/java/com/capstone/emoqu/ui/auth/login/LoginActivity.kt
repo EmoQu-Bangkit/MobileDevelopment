@@ -21,7 +21,7 @@ import com.capstone.emoqu.databinding.ActivityLoginBinding
 import com.capstone.emoqu.ui.ViewModelFactory
 import com.capstone.emoqu.data.remote.Result
 import com.capstone.emoqu.ui.auth.register.RegisterActivity
-import com.capstone.emoqu.ui.fragment.TodayFragment
+import com.capstone.emoqu.ui.today.TodayFragment
 
 class LoginActivity : AppCompatActivity() {
 

@@ -10,7 +10,7 @@ import com.capstone.emoqu.ui.auth.pref.AuthPreferences
 import com.capstone.emoqu.ui.auth.pref.AuthViewModel
 import com.capstone.emoqu.ui.auth.pref.dataStore
 import com.capstone.emoqu.ui.auth.register.RegisterViewModel
-import com.capstone.emoqu.ui.fragment.TodayViewModel
+import com.capstone.emoqu.ui.today.TodayViewModel
 
 class ViewModelFactory(
     private val emoQuRepository: EmoQuRepository,

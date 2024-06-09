@@ -1,4 +1,4 @@
-package com.capstone.emoqu.ui.fragment
+package com.capstone.emoqu.ui.today
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,16 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.capstone.emoqu.R
-import com.capstone.emoqu.databinding.ActivityRegisterBinding
 import com.capstone.emoqu.databinding.FragmentTodayBinding
 import com.capstone.emoqu.ui.ViewModelFactory
 import com.capstone.emoqu.ui.auth.login.LoginActivity
-import com.capstone.emoqu.ui.auth.register.RegisterViewModel
 
 class TodayFragment : Fragment() {
 

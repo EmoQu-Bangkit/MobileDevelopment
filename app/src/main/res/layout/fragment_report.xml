@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_background_yellow_2"
-    tools:context=".ui.fragment.ReportFragment">
+    tools:context=".ui.report.ReportFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

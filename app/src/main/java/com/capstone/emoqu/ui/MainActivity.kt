@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.capstone.emoqu.R
-import com.capstone.emoqu.ui.fragment.AddFragment
-import com.capstone.emoqu.ui.fragment.ReportFragment
-import com.capstone.emoqu.ui.fragment.TodayFragment
+import com.capstone.emoqu.ui.report.ReportFragment
+import com.capstone.emoqu.ui.today.TodayFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 @Suppress("DEPRECATION")
