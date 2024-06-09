@@ -148,7 +148,8 @@
         <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:src="@drawable/emoji_excellent" />
+            android:src="@drawable/emoji_excellent"
+            android:contentDescription="@string/excellent_label" />
 
         <TextView
             android:layout_width="wrap_content"
