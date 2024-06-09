@@ -9,6 +9,7 @@ import com.capstone.emoqu.ui.fragment.ReportFragment
 import com.capstone.emoqu.ui.fragment.TodayFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

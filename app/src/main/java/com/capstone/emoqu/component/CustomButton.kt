@@ -34,9 +34,15 @@ class CustomButton @JvmOverloads constructor(
         background = if (isEnabled) enabledBackground else disabledBackground
     }
 
-    fun setEnabledState(email: String, password: String, name: String? = null, isRegister: Boolean = false) {
+    fun setEnabledState(
+        email: String,
+        password: String,
+        firstName: String? = null,
+        lastName: String? = null,
+        isRegister: Boolean = false
+    ) {
         isEnabled = if (isRegister) {
-            email.isNotEmpty() && password.isNotEmpty() && !name.isNullOrEmpty()
+            email.isNotEmpty() && password.isNotEmpty() && !firstName.isNullOrEmpty() && !lastName.isNullOrEmpty()
         } else {
             email.isNotEmpty() && password.isNotEmpty()
         }

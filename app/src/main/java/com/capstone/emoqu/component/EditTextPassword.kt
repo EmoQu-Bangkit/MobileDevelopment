@@ -54,6 +54,7 @@ class EditTextPassword @JvmOverloads constructor(
         super.onDraw(canvas)
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
         textSize = 14f
+        setHintTextColor(ContextCompat.getColor(context, R.color.light_border_yellow_8))
     }
 
     private fun showPassword() {
