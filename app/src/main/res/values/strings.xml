@@ -45,6 +45,13 @@
     <string name="okay_label">Okay</string>
     <string name="good_label">Good</string>
     <string name="excellent_label">Excellent</string>
+    <string name="title_summary_report">Summary Report</string>
+    <string name="note_message">Note : This sentiment analysis is based on data processing results from user-entered notes</string>
+    <string name="title_sentimen_analysis">Sentimen Analysis</string>
+    <string name="title_your_activities">Your Activities</string>
+    <string name="title_activity_recommend">Activities That You Can Do</string>
+    <string name="list_reccomend_activity">List reccomend activity</string>
+    <string name="text_our_recommendations">Our Recommendations</string>
     <string-array name="month_array">
         <item>January</item>
         <item>February</item>
