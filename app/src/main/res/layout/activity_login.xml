@@ -25,14 +25,13 @@
         android:id="@+id/tv_welcome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:alpha="0"
+        android:alpha="1"
         android:text="@string/welcome_app"
         android:textColor="@color/light_text_grey_12"
         android:textSize="16sp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:alpha="100"
         tools:ignore="MissingConstraints" />
 
 
@@ -41,7 +40,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:alpha="0"
+        android:alpha="1"
         android:text="@string/slogan"
         android:textColor="@color/light_text_grey_12"
         android:textSize="20sp"
@@ -50,7 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
-        tools:alpha="100"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -73,12 +71,11 @@
         android:layout_marginTop="20dp"
         android:textSize="16sp"
         android:gravity="center"
-        android:alpha="0"
+        android:alpha="1"
         android:text="@string/welcome_message"
         android:textColor="@color/light_text_grey_12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_login"
-        tools:alpha="100" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_login" />
 
     <TextView
         android:id="@+id/tv_email"
@@ -87,13 +84,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
-        android:alpha="0"
+        android:alpha="1"
         android:text="@string/email"
         android:textSize="14sp"
         android:textColor="@color/light_text_grey_12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_message"
-        tools:alpha="100" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_message" />
 
     <com.capstone.emoqu.component.EditTextEmail
         android:id="@+id/ed_email"
@@ -114,13 +110,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        android:alpha="0"
+        android:alpha="1"
         android:text="@string/password"
         android:textSize="14sp"
         android:textColor="@color/light_text_grey_12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed_email"
-        tools:alpha="100" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_email" />
 
     <com.capstone.emoqu.component.EditTextPassword
         android:id="@+id/ed_password"
@@ -153,14 +148,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:alpha="0"
+        android:alpha="1"
         android:text="@string/register_question"
         android:textSize="14sp"
         android:gravity="center"
         android:textColor="@color/light_text_grey_12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        tools:alpha="100" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
