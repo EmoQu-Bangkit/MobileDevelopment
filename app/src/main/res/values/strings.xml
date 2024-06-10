@@ -40,4 +40,11 @@
     <string name="good_label">Good</string>
     <string name="excellent_label">Excellent</string>
     <string name="choose_mood">Tap to record your mood</string>
+    <string name="activity_label">Activities</string>
+    <string name="duration_label">Duration</string>
+    <string name="duration_hours">Duration in hours</string>
+    <string name="duration">Duration</string>
+    <string name="activities">Activities</string>
+    <string name="notes">Notes</string>
+    <string name="notes_example">Example Notes: Hari ini aku senang banget karena mendapatkan pengumuman magang di perusahaan komputer, main hp dan mengabarkan teman.</string>
 </resources>

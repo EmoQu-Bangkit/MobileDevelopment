@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="48dp"
+    android:paddingHorizontal="16dp"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.add.ActivitiesFragment">
+
+
+    <TextView
+        android:id="@+id/tv_activities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:alpha="1"
+        android:text="@string/activities"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_grey_12" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_activities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/tv_background"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/activity_label"
+            android:textColorHint="@color/light_border_yellow_8"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:alpha="1"
+        android:text="@string/duration"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_grey_12" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_background"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/duration_hours"
+            android:textColorHint="@color/light_border_yellow_8"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notes"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <com.capstone.emoqu.component.CustomEditText
+        android:id="@+id/ed_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/tv_background" />
+
+
+</LinearLayout>
