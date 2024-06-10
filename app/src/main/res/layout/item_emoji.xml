@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_emoji"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="128dp"
     android:padding="16dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
+    android:layout_marginHorizontal="20dp"
     android:background="@drawable/bg_mood_component"
     android:layout_gravity="center">
 
@@ -18,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="@string/greeting_moods"
         android:layout_marginStart="9dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/light_border_yellow_8"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +37,9 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:src="@drawable/emoji_terrible"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/emoji_teribble"
             android:contentDescription="@string/terrible_label" />
 
         <TextView
@@ -48,7 +47,8 @@
             android:layout_height="wrap_content"
             android:text="@string/terrible_label"
             android:textColor="@color/light_border_yellow_8"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"/>
     </LinearLayout>
 
     <!-- Bad -->
@@ -65,8 +65,8 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/emoji_bad"
             android:contentDescription="@string/bad_label" />
 
@@ -75,7 +75,8 @@
             android:layout_height="wrap_content"
             android:text="@string/bad_label"
             android:textColor="@color/light_border_yellow_8"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"/>
     </LinearLayout>
 
     <!-- Okay -->
@@ -92,8 +93,8 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/emoji_okay"
             android:contentDescription="@string/okay_label" />
 
@@ -102,7 +103,8 @@
             android:layout_height="wrap_content"
             android:text="@string/okay_label"
             android:textColor="@color/light_border_yellow_8"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"/>
     </LinearLayout>
 
     <!-- Good -->
@@ -119,8 +121,8 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/emoji_good"
             android:contentDescription="@string/good_label" />
 
@@ -129,7 +131,8 @@
             android:layout_height="wrap_content"
             android:text="@string/good_label"
             android:textColor="@color/light_border_yellow_8"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"/>
     </LinearLayout>
 
     <!-- Excellent -->
@@ -146,17 +149,18 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/emoji_excellent"
-            android:contentDescription="@string/excellent_label" />
+            android:contentDescription="@string/excellent_label"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/excellent_label"
             android:textColor="@color/light_border_yellow_8"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

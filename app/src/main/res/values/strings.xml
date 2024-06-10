@@ -1,6 +1,18 @@
 <resources>
-    <!--Application Name-->
     <string name="app_name">EmoQu</string>
+
+    <string name="register">Sign Up</string>
+    <string name="login">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="welcome_app">Welcome to</string>
+    <string name="slogan">EmoQu: Your Personal Diary</string>
+    <string name="welcome_message">Want to know yourself better? EmoQu is ready to help you here!</string>
+    <string name="login_question">Already have an account? Sign In</string>
+    <string name="register_question">Don\'t have an account yet? Sign Up</string>
 
     <!--Asset-->
     <string name="terrible_mood">This week seems really hard for you. Many challenges arise, making you feel tired and overwhelmed. Remember, it\'s okay to take a break.</string>
@@ -12,32 +24,46 @@
     <string name="fitness_fanatic_condition">It seems like you\'re really excited about outdoor activities this week, which is reflected in the amount of time you spend on them.</string>
     <string name="active_explorer_condition">It seems like this week you\'ve been doing a lot of things that you enjoy, that might be good but don\'t forget your duties.</string>
     <string name="balanced_achiever_condition">A stable week for you, everything almost went according to plan without a significant obstacle.</string>
-
-    <!--Another Strings-->
-    <string name="register">Sign Up</string>
-    <string name="login">Sign In</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="welcome_app">Welcome to</string>
-    <string name="slogan">EmoQu: Your Personal Diary</string>
-    <string name="welcome_message">Want to know yourself better? <b>EmoQu</b> is ready to help you here!</string>
-    <string name="login_question">Already have an account? Sign In</string>
-    <string name="register_question">Don\'t have an account yet? Sign Up</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="menu_add">Add</string>
     <string name="menu_today">Today</string>
     <string name="menu_report">Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_add">Add</string>
     <string name="today_page">Today Page</string>
     <string name="report_page">Report Page</string>
     <string name="add_page">Add Page</string>
+    <string name="add_activity">Add Activity</string>
+    <string name="day">Day</string>
+    <string name="date">Date</string>
+    <string name="text_my_activities">My Activities</string>
+    <string name="text_activity_mood">Activity Mood</string>
+    <string name="text_activity_time">Time</string>
+    <string name="text_activity_notes">Notes</string>
     <string name="greeting_moods">Hi, how\'s your activity?</string>
     <string name="terrible_label">Terrible</string>
     <string name="bad_label">Bad</string>
     <string name="okay_label">Okay</string>
     <string name="good_label">Good</string>
     <string name="excellent_label">Excellent</string>
-    <string name="choose_mood">Tap to record your mood</string>
+    <string name="title_summary_report">Summary Report</string>
+    <string name="note_message">Note : This sentiment analysis is based on data processing results from user-entered notes</string>
+    <string name="title_sentimen_analysis">Sentimen Analysis</string>
+    <string name="title_your_activities">Your Activities</string>
+    <string name="title_activity_recommend">Activities That You Can Do</string>
+    <string name="list_reccomend_activity">List reccomend activity</string>
+    <string name="text_our_recommendations">Our Recommendations</string>
+    <string-array name="month_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 </resources>
