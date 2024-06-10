@@ -39,7 +39,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/emoji_teribble"
+            android:src="@drawable/emoji_terrible"
             android:contentDescription="@string/terrible_label" />
 
         <TextView
