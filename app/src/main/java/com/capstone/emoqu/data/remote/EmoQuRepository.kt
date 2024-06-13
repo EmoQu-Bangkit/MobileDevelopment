@@ -7,7 +7,6 @@ import com.capstone.emoqu.data.response.RegisterResponse
 import com.capstone.emoqu.data.retrofit.ApiService
 import com.capstone.emoqu.ui.auth.pref.AuthPreferences
 import com.capstone.emoqu.data.response.LoginResponse
-import com.capstone.emoqu.data.response.LoginResult
 
 class EmoQuRepository(
     private val apiService: ApiService,

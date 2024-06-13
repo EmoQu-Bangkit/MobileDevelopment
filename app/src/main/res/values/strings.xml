@@ -90,4 +90,6 @@
     <string name="notes_example">Example Notes: \nHari ini aku senang banget karena mendapatkan pengumuman magang di perusahaan komputer, main hp dan mengabarkan teman.</string>
     <string name="title_add_activity">Add Activity</string>
     <string name="save_button">Save</string>
+    <string name="duration_graph">Duration Graph</string>
+    <string name="nlp_graph">NLP Graph</string>
 </resources>

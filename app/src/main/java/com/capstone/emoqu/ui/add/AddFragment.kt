@@ -1,8 +1,6 @@
 package com.capstone.emoqu.ui.add
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +10,6 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import com.capstone.emoqu.R
-import com.capstone.emoqu.component.CustomButton
 import com.capstone.emoqu.data.local.MoodModel
 import com.capstone.emoqu.databinding.FragmentAddBinding
 
