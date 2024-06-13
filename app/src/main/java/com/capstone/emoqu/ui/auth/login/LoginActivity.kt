@@ -20,6 +20,7 @@ import com.capstone.emoqu.component.CustomButton
 import com.capstone.emoqu.databinding.ActivityLoginBinding
 import com.capstone.emoqu.ui.ViewModelFactory
 import com.capstone.emoqu.data.remote.Result
+import com.capstone.emoqu.ui.MainActivity
 import com.capstone.emoqu.ui.auth.register.RegisterActivity
 import com.capstone.emoqu.ui.today.TodayFragment
 
@@ -81,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
                             "Login successful: ${result.data.message}",
                             Toast.LENGTH_LONG
                         ).show()
+                        navigateFromActivityToAnotherActivity(MainActivity::class.java)
                         navigateFromActivityToFragment(TodayFragment())
                     }
                     is Result.Error -> {

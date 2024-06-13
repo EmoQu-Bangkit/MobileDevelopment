@@ -15,7 +15,7 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "se
 
 class AuthPreferences private constructor(private val dataStore: DataStore<Preferences>) {
 
-    private val TOKEN_KEY = stringPreferencesKey("idToken")
+    private val TOKEN_KEY = stringPreferencesKey("token")
 
     fun getSession(): Flow<String> {
         return dataStore.data.map { preferences ->
@@ -23,11 +23,11 @@ class AuthPreferences private constructor(private val dataStore: DataStore<Prefe
         }.also { Log.d("Authentication", "Session loaded") }
     }
 
-    suspend fun saveSession(idToken: String) {
+    suspend fun saveSession(token: String) {
         dataStore.edit {
-            it[TOKEN_KEY] = idToken
+            it[TOKEN_KEY] = token
         }
-        Log.d("Authentication", "Session saved: token=$idToken")
+        Log.d("Authentication", "Session saved: token=$token")
     }
 
     suspend fun clearSession() {

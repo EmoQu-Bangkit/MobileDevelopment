@@ -22,7 +22,8 @@
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/emoji_okay"/>
+            tools:src="@drawable/emoji_okay"
+            tools:ignore="MissingClass" />
 
         <TextView
             android:id="@+id/mood_today"
