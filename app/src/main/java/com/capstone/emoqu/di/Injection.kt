@@ -1,6 +1,7 @@
 package com.capstone.emoqu.di
 
 import android.content.Context
+import com.capstone.emoqu.data.local.databaseAcvitity.ActivityRoomDatabase
 import com.capstone.emoqu.data.remote.EmoQuRepository
 import com.capstone.emoqu.data.retrofit.ApiConfig
 import com.capstone.emoqu.ui.auth.pref.AuthPreferences
@@ -14,6 +15,7 @@ object Injection {
         val idTokenFlow = pref.getSession()
         val idToken = runBlocking { idTokenFlow.first() }
         val apiService = ApiConfig.getApiService(idToken)
-        return EmoQuRepository.getInstance(apiService, pref)
+        val database = ActivityRoomDatabase.getInstance(context)
+        return EmoQuRepository.getInstance(apiService, pref, database)
     }
 }

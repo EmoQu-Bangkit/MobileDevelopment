@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.emoqu.data.remote.EmoQuRepository
 import com.capstone.emoqu.di.Injection
+import com.capstone.emoqu.ui.add.AddActivityViewModel
 import com.capstone.emoqu.ui.auth.login.LoginViewModel
 import com.capstone.emoqu.ui.auth.pref.AuthPreferences
 import com.capstone.emoqu.ui.auth.pref.AuthViewModel
@@ -29,6 +30,9 @@ class ViewModelFactory(
         }
         else if (modelClass.isAssignableFrom(TodayViewModel::class.java)) {
             return TodayViewModel(emoQuRepository, authentication) as T
+        }
+        else if (modelClass.isAssignableFrom(AddActivityViewModel::class.java)) {
+            return AddActivityViewModel(emoQuRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class" + modelClass.name)
     }

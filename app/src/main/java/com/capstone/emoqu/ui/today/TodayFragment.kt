@@ -11,6 +11,7 @@ import com.capstone.emoqu.databinding.FragmentTodayBinding
 import com.capstone.emoqu.ui.ViewModelFactory
 import com.capstone.emoqu.ui.auth.login.LoginActivity
 
+
 class TodayFragment : Fragment() {
 
     private var _binding: FragmentTodayBinding? = null
