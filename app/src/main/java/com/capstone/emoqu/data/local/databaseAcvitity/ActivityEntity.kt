@@ -6,7 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-@Entity
+@Entity (tableName = "activities_table")
 @Parcelize
 data class ActivityEntity (
     @PrimaryKey(autoGenerate = true)
@@ -26,5 +26,9 @@ data class ActivityEntity (
     var duration: Int,
 
     @ColumnInfo(name = "notes")
-    var notes: String? = null
+    var notes: String? = null,
+
+    @ColumnInfo(name = "synced")
+    var synced: Boolean = false
+
 ) : Parcelable

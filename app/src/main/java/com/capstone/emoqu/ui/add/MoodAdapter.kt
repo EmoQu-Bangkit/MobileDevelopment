@@ -43,12 +43,4 @@ class MoodAdapter(
             root.isSelected = selectedPosition == position
         }
     }
-
-    fun getSelectedMood(): MoodModel? {
-        return if (selectedPosition != RecyclerView.NO_POSITION) {
-            moodList[selectedPosition]
-        } else {
-            null
-        }
-    }
 }

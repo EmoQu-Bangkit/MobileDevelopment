@@ -16,6 +16,6 @@ object Injection {
         val idToken = runBlocking { idTokenFlow.first() }
         val apiService = ApiConfig.getApiService(idToken)
         val database = ActivityRoomDatabase.getInstance(context)
-        return EmoQuRepository.getInstance(apiService, pref, database)
+        return EmoQuRepository.getInstance(apiService, pref, database, context.applicationContext)
     }
 }

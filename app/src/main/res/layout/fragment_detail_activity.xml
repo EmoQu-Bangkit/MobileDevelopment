@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background_main"
+    android:paddingVertical="48dp"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.detail.DetailActivityFragment"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_text_grey_12"
+            android:gravity="center"
+            tools:text="Time Stamp"/>
+
+        <ImageView
+            android:id="@+id/iv_mood_image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginVertical="40dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/emoji_bad"
+            android:contentDescription="@string/mood" />
+
+        <TextView
+            android:id="@+id/tv_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:text="@string/activities"
+            android:textSize="14sp"
+            android:textColor="@color/light_text_grey_12" />
+
+        <TextView
+            android:id="@+id/tv_activity_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_background"
+            android:textColor="@color/light_text_grey_12"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            tools:text="@string/activity_label"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            android:text="@string/duration"
+            android:textSize="14sp"
+            android:textColor="@color/light_text_grey_12" />
+
+        <TextView
+            android:id="@+id/tv_duration_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_background"
+            android:textColor="@color/light_text_grey_12"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            tools:text="@string/duration_label"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="1"
+            android:text="@string/notes"
+            android:textSize="14sp"
+            android:textColor="@color/light_text_grey_12" />
+
+        <TextView
+            android:id="@+id/tv_notes_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_background"
+            android:textColor="@color/light_text_grey_12"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            android:singleLine="false"
+            android:minLines="3"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:gravity="start|top"
+            tools:text="@string/notes"
+            tools:ignore="Autofill,LabelFor" />
+
+    </LinearLayout>
+</ScrollView>

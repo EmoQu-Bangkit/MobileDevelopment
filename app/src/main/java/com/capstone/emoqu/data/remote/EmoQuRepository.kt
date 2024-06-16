@@ -1,26 +1,36 @@
 package com.capstone.emoqu.data.remote
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
 import com.capstone.emoqu.data.local.databaseAcvitity.ActivityEntity
 import com.capstone.emoqu.data.local.databaseAcvitity.ActivityRoomDatabase
+import com.capstone.emoqu.data.response.AddActivityResponse
+import com.capstone.emoqu.data.response.ListActivityResponse
 import com.capstone.emoqu.data.response.RegisterResponse
 import com.capstone.emoqu.data.retrofit.ApiService
 import com.capstone.emoqu.ui.auth.pref.AuthPreferences
 import com.capstone.emoqu.data.response.LoginResponse
+import com.capstone.emoqu.data.response.ProfileResponse
+import com.capstone.emoqu.data.retrofit.ApiConfig
+import com.capstone.emoqu.utils.NetworkCheck
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.withContext
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+
 
 class EmoQuRepository(
     private val apiService: ApiService,
     private val authentication: AuthPreferences,
-    private val database: ActivityRoomDatabase
+    private val database: ActivityRoomDatabase,
+    private val applicationContext: Context
 ){
     private val activityDao = database.activityDao()
-    private val executorService: ExecutorService = Executors.newSingleThreadExecutor()
 
     fun register(firstName: String, lastName:String, email: String, password: String)
             : LiveData<Result<RegisterResponse>> = liveData {
@@ -53,27 +63,152 @@ class EmoQuRepository(
         }
     }
 
-    fun getAllActivity(): LiveData<Result<List<ActivityEntity>>> = liveData {
+    private suspend fun uploadDataToLocal(activity: ActivityEntity): Result<Unit> {
+        return try {
+            withContext(Dispatchers.IO) {
+                activityDao.insert(activity)
+            }
+            Result.Success(Unit)
+        } catch (e: Exception) {
+            Result.Error("Failed to insert activity locally: ${e.message}")
+        }
+    }
+
+
+    private suspend fun uploadToServer(activity: ActivityEntity): Result<AddActivityResponse> {
+        return try {
+            val token = withContext(Dispatchers.IO) {
+                authentication.getSession().first()
+            }
+
+            if (token.isEmpty()) {
+                return Result.Error("Token is empty")
+            }
+            val response = withContext(Dispatchers.IO) {
+                val apiServiceWithToken = ApiConfig.getApiService(token)
+                apiServiceWithToken.addActivity(
+                    activity.quality,
+                    activity.activity,
+                    activity.duration,
+                    activity.notes ?: ""
+                )
+            }
+            if (response.error) {
+                Result.Error("Failed to upload activity: ${response.message}")
+            } else {
+                Result.Success(response)
+            }
+        } catch (e: Exception) {
+            Result.Error("Exception occurred: ${e.message}")
+        }
+    }
+
+    fun getAllDataFromServer(): LiveData<Result<ListActivityResponse>> = liveData {
         emit(Result.Loading)
         try {
-            val activities = activityDao.getAllActivity().value ?: emptyList()
-            emit(Result.Success(activities))
+            val token = withContext(Dispatchers.IO) {
+                authentication.getSession().first()
+            }
+            Log.d("EmoQuRepository", "Fetched token: $token")
+
+            if (token.isNotEmpty()) {
+                val apiServiceWithToken = ApiConfig.getApiService(token)
+                val response = apiServiceWithToken.listActivity()
+                if (!response.error) {
+                    emit(Result.Success(response))
+                } else {
+                    emit(Result.Error(response.message))
+                }
+            } else {
+                emit(Result.Error("Token is empty"))
+            }
         } catch (e: Exception) {
             emit(Result.Error(e.message ?: "An unknown error occurred"))
         }
     }
 
-    fun insertActivity(activity: ActivityEntity) {
-        executorService.execute {activityDao.insert(activity)}
+    fun getProfileUser(): LiveData<Result<ProfileResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val token = withContext(Dispatchers.IO) {
+                authentication.getSession().first()
+            }
+            Log.d("EmoQuRepository", "Fetched token: $token")
+
+            if (token.isNotEmpty()) {
+                val apiServiceWithToken = ApiConfig.getApiService(token)
+                val response = apiServiceWithToken.getProfile()
+                if (!response.error) {
+                    emit(Result.Success(response))
+                } else {
+                    emit(Result.Error("An error occurred: Unable to fetch user profile data"))
+                }
+            } else {
+                emit(Result.Error("Token is empty"))
+            }
+        } catch (e: Exception) {
+            emit(Result.Error(e.message ?: "An unknown error occurred"))
+        }
     }
 
-    fun delete(activity: ActivityEntity) {
-        executorService.execute { activityDao.delete(activity) }
-    }
-    fun update(activity: ActivityEntity) {
-        executorService.execute { activityDao.update(activity) }
+
+    suspend fun syncData(): Result<Unit> {
+        return try {
+            if (NetworkCheck.isNetworkAvailable(applicationContext)) {
+                Log.d("SyncData", "Starting synchronization process...")
+
+                // Ambil data yang belum disinkronkan dari lokal
+                val unsyncedActivities = activityDao.getUnsyncedActivities()
+                for (activity in unsyncedActivities) {
+                    val serverResult = uploadToServer(activity)
+                    if (serverResult is Result.Success) {
+                        // Jika berhasil, tandai data sebagai sudah disinkronkan
+                        activity.synced = true
+                        activityDao.markAsSynced(activity.id)
+                    } else {
+                        Log.e("SyncData", "Failed to sync activity: ${activity.id}")
+                    }
+                }
+                Log.d("SyncData", "Synchronization process completed successfully.")
+                Result.Success(Unit)
+            } else {
+                Result.Error("No internet connection")
+            }
+        } catch (e: Exception) {
+            Log.e("SyncData", "Exception during sync: ${e.message}", e)
+            Result.Error("Failed to sync data: ${e.message}")
+        }
     }
 
+
+    suspend fun saveActivity(activity: ActivityEntity): Result<Unit> {
+        return withContext(Dispatchers.IO) {
+            try {
+                if (NetworkCheck.isNetworkAvailable(applicationContext)) {
+                    // Jika ada koneksi internet, simpan ke server
+                    val serverResult = uploadToServer(activity)
+                    Log.d("EmoQuRepository", "Uploaded to server successfully")
+                    if (serverResult is Result.Error) {
+                        // Gagal upload ke server, simpan ke lokal
+                        Log.d("EmoQuRepository", "Failed to upload to server, saving locally")
+                        uploadDataToLocal(activity)
+                    } else {
+                        // Berhasil upload ke server, juga simpan ke lokal
+                        Log.d("EmoQuRepository", "Uploaded to server, saving locally as well")
+                        uploadDataToLocal(activity)
+                        Result.Success(Unit)
+                    }
+                } else {
+                    // Tidak ada koneksi internet, simpan ke lokal
+                    Log.d("EmoQuRepository", "No network, saving locally")
+                    uploadDataToLocal(activity)
+                }
+            } catch (e: Exception) {
+                Log.e("EmoQuRepository", "Failed to save activity: ${e.message}")
+                Result.Error("Failed to save activity: ${e.message}")
+            }
+        }
+    }
 
     companion object {
         @Volatile
@@ -82,10 +217,11 @@ class EmoQuRepository(
         fun getInstance(
             apiService: ApiService,
             authentication: AuthPreferences,
-            database: ActivityRoomDatabase
+            database: ActivityRoomDatabase,
+            applicationContext: Context
         ): EmoQuRepository {
             return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: EmoQuRepository(apiService, authentication, database)
+                INSTANCE ?: EmoQuRepository(apiService, authentication, database, applicationContext)
             }.also { INSTANCE = it }
         }
     }

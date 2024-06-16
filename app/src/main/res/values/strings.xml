@@ -92,4 +92,9 @@
     <string name="save_button">Save</string>
     <string name="duration_graph">Duration Graph</string>
     <string name="nlp_graph">NLP Graph</string>
+    <string name="about_default">Keep Smile Everyday!☺️</string>
+    <string name="mood">mood</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_logout">Logout</string>
 </resources>

@@ -15,8 +15,8 @@ import com.capstone.emoqu.ui.today.TodayViewModel
 
 class ViewModelFactory(
     private val emoQuRepository: EmoQuRepository,
-    private val authentication: AuthPreferences)
-    : ViewModelProvider.NewInstanceFactory() {
+    private val authentication: AuthPreferences,
+) : ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {

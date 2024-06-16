@@ -16,7 +16,7 @@
         android:layout_marginTop="50dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/circleImageView"
+            android:id="@+id/iv_user"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginHorizontal="20dp"
@@ -29,31 +29,25 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hi, Bangkit!"
-                android:paddingVertical="5dp"
+                android:layout_marginBottom="4dp"
                 android:textColor="@color/light_text_grey_12"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="Hi, Bangkit!"/>
 
             <TextView
+                android:id="@+id/tv_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dream big, work hard, and stay humble"
+                android:text="@string/about_default"
                 android:textSize="11sp"
                 android:textColor="@color/light_text_grey_12" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="end|top"
-        android:layout_margin="20dp"
-        android:contentDescription="Icon Settings"
-        android:src="@drawable/ic_setting" />
 
     <!-- Main Content -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -61,6 +55,18 @@
         android:layout_height="match_parent"
         android:background="@drawable/rounded_top_corner"
         android:layout_marginTop="160dp">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/view_switcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/emoji_container"
@@ -105,13 +111,6 @@
                 android:layout_height="match_parent"
                 tools:listitem="@layout/item_today" />
 
-            <ImageView
-                android:id="@+id/iv_no_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/image_no_data"
-                android:contentDescription="No Data Available"
-                android:layout_gravity="top|center" />
         </ViewSwitcher>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.EmoQu" parent="Base.Theme.EmoQu" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.Material3.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.Material3" />
 </resources>

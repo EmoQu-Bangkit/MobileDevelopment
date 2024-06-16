@@ -10,15 +10,16 @@ import androidx.room.Update
 
 @Dao
 interface ActivityDao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+
+    @Query("SELECT * FROM activities_table WHERE synced = 0")
+    fun getUnsyncedActivities(): List<ActivityEntity>
+
+    @Query("UPDATE activities_table SET synced = 1 WHERE id = :id")
+    fun markAsSynced(id: Int)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(activity: ActivityEntity)
 
-    @Update
-    fun update(activity: ActivityEntity)
-
-    @Delete
-    fun delete(activity: ActivityEntity)
-
-    @Query("SELECT * from ActivityEntity ORDER BY id ASC")
+    @Query("SELECT * FROM activities_table")
     fun getAllActivity(): LiveData<List<ActivityEntity>>
 }
