@@ -1,11 +1,9 @@
 package com.capstone.emoqu.data.remote
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import androidx.lifecycle.map
 import com.capstone.emoqu.data.local.databaseAcvitity.ActivityEntity
 import com.capstone.emoqu.data.local.databaseAcvitity.ActivityRoomDatabase
 import com.capstone.emoqu.data.response.AddActivityResponse
@@ -20,9 +18,6 @@ import com.capstone.emoqu.utils.NetworkCheck
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
-import java.util.concurrent.ExecutorService
-import java.util.concurrent.Executors
-
 
 class EmoQuRepository(
     private val apiService: ApiService,

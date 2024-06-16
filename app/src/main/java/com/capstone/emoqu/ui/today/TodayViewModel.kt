@@ -3,7 +3,6 @@ package com.capstone.emoqu.ui.today
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import androidx.lifecycle.liveData
 import com.capstone.emoqu.data.remote.EmoQuRepository
 import com.capstone.emoqu.data.remote.Result
 import com.capstone.emoqu.data.response.ListActivityResponse

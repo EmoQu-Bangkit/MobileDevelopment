@@ -39,10 +39,5 @@ abstract class ActivityRoomDatabase : RoomDatabase() {
                 db.execSQL("ALTER TABLE activities_table ADD COLUMN synced INTEGER NOT NULL DEFAULT 0")
             }
         }
-
-        fun closeDatabase() {
-            INSTANCE?.close()
-            INSTANCE = null
-        }
     }
 }
