@@ -3,6 +3,7 @@ package com.capstone.emoqu.ui.today
 import ActivityAdapter
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -58,7 +59,7 @@ class TodayFragment : Fragment() {
 
         viewModel.getSession().observe(viewLifecycleOwner){
             if(it.isEmpty()){
-               navigateFromFragmentToActivity(LoginActivity::class.java)
+                navigateFromFragmentToActivity(LoginActivity::class.java)
             } else {
                 getProfileUser()
                 getActivityData()
@@ -86,7 +87,6 @@ class TodayFragment : Fragment() {
                 is Result.Loading -> {
                     binding.progressBar.visibility = View.VISIBLE
                 }
-
                 is Result.Success -> {
                     binding.progressBar.visibility = View.GONE
                     val profile = result.data.profile
@@ -108,7 +108,6 @@ class TodayFragment : Fragment() {
                         }
                     }
                 }
-
                 is Result.Error -> {
                     binding.progressBar.visibility = View.VISIBLE
                     Toast.makeText(context, result.error, Toast.LENGTH_LONG).show()
@@ -123,7 +122,6 @@ class TodayFragment : Fragment() {
                 is Result.Loading -> {
                     binding.progressBar.visibility = View.VISIBLE
                 }
-
                 is Result.Success -> {
                     binding.progressBar.visibility = View.GONE
                     Toast.makeText(
@@ -131,13 +129,13 @@ class TodayFragment : Fragment() {
                         "Data displayed successfully",
                         Toast.LENGTH_SHORT
                     ).show()
-                    val activities = result.data.activities.filter { activity ->
-                        isToday(activity.timeStamp)
-                    }
+                    val activities = result.data.activities
+                    Log.d("TodayFragment", "Activities size: ${activities.size}")
+                    activities.forEach { Log.d("TodayFragment", it.toString()) }
+
                     activityAdapter.submitList(activities)
                     binding.viewSwitcher.showPrevious()
                 }
-
                 is Result.Error -> {
                     binding.progressBar.visibility = View.VISIBLE
                     binding.viewSwitcher.showNext()

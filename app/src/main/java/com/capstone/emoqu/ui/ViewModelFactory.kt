@@ -11,6 +11,7 @@ import com.capstone.emoqu.ui.auth.pref.AuthPreferences
 import com.capstone.emoqu.ui.auth.pref.AuthViewModel
 import com.capstone.emoqu.ui.auth.pref.dataStore
 import com.capstone.emoqu.ui.auth.register.RegisterViewModel
+import com.capstone.emoqu.ui.report.ReportViewModel
 import com.capstone.emoqu.ui.today.TodayViewModel
 
 class ViewModelFactory(
@@ -33,6 +34,9 @@ class ViewModelFactory(
         }
         else if (modelClass.isAssignableFrom(AddActivityViewModel::class.java)) {
             return AddActivityViewModel(emoQuRepository) as T
+        }
+        else if (modelClass.isAssignableFrom(ReportViewModel::class.java)) {
+            return ReportViewModel(emoQuRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class" + modelClass.name)
     }

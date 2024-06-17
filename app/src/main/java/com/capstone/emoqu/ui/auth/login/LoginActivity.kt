@@ -58,11 +58,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        val imageViewGif = findViewById<ImageView>(R.id.iv_login)
         Glide.with(this)
             .asGif()
             .load(R.drawable.login)
-            .into(imageViewGif)
+            .into(binding.ivLogin)
 
         binding.edEmail.addTextChangedListener(textWatcher)
         binding.edPassword.addTextChangedListener(textWatcher)

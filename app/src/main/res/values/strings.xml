@@ -2,16 +2,46 @@
     <!--Application Name-->
     <string name="app_name">EmoQu</string>
 
-    <!--Asset-->
-    <string name="terrible_mood">This week seems really hard for you. Many challenges arise, making you feel tired and overwhelmed. Remember, it\'s okay to take a break.</string>
-    <string name="bad_mood">This week doesn\'t seem to be what you expected. Many things are disappointing, but focus on the things that can be improved and make you happy. Keep it up!</string>
-    <string name="okay_mood">This week looks to be pretty good, with some good moments and some less than satisfying ones. Neutral weeks are also important for your balance.</string>
-    <string name="good_mood">This week is exciting for you. Many positive things happen and you feel satisfied with your achievements. Stay enthusiastic and face challenges with a smile!</string>
-    <string name="excellent_mood">This week has been amazing for you. Every day is filled with happiness and fulfilling achievements. Keep this positive energy going and enjoy every moment!</string>
-    <string name="stressful_overload_condition">A lot of work to be done and a lack of time for refreshing caused you to be too stressed this week.</string>
-    <string name="fitness_fanatic_condition">It seems like you\'re really excited about outdoor activities this week, which is reflected in the amount of time you spend on them.</string>
-    <string name="active_explorer_condition">It seems like this week you\'ve been doing a lot of things that you enjoy, that might be good but don\'t forget your duties.</string>
-    <string name="balanced_achiever_condition">A stable week for you, everything almost went according to plan without a significant obstacle.</string>
+    <!--Asset Daily Mood-->
+    <string name="terrible_mood">Today seems really hard for you. Many challenges arise,
+        making you feel tired and overwhelmed. Remember, it\'s okay to take a break.
+    </string>
+    <string name="bad_mood">Today doesn\'t seem like what you expected. Many things are disappointing,
+        but focus on the things that can be improved and make you happy. Keep it up!
+    </string>
+    <string name="okay_mood">Today looked pretty good, with some good moments and some less than satisfying ones.
+        Neutral days are also important for your balance.
+    </string>
+    <string name="good_mood">Today is a happy day for you. Many positive things happen and you feel satisfied with your achievements.
+        Stay enthusiastic and face challenges with a smile!
+    </string>
+    <string name="excellent_mood">Today is truly extraordinary for you. Your day is filled with happiness and fulfilling achievements.
+        Keep this positive energy going and enjoy every moment!
+    </string>
+
+    <!--Asset Daily Condition-->
+    <string name="stressful_overload_condition">A lot of work to be done and a lack of time for refreshing caused you too stressed today.</string>
+    <string name="fitness_fanatic_condition">It seems like you\'re really excited about outdoor activities today,
+        which is reflected in the amount of time you spend on them.
+    </string>
+    <string name="active_explorer_condition">It looks like you\'ve spent a lot of time today on activities you enjoy,
+        which is great, but remember to keep up with your responsibilities too.
+    </string>
+    <string name="balanced_achiever_condition">Today went smoothly for you, everything went according to plan and there were no significant obstacles.</string>
+
+    <!--Asset Type Mood-->
+    <string name="teribble">TERIBBLE</string>
+    <string name="bad">BAD</string>
+    <string name="okay">OKAY</string>
+    <string name="good">GOOD</string>
+    <string name="excellent">EXCELLENT</string>
+
+    <!--Asset Type Contidion-->
+    <string name="stressful_overload">STRESSFUL OVERLOAD</string>
+    <string name="fitness_fanatic">FITNESS FANATIC</string>
+    <string name="active_explorer">ACTIVE EXPLORER</string>
+    <string name="balanced_achiever">BALANCED ACHIEVER</string>
+
 
     <!--Item List-->
     <string-array name="month_array">
@@ -97,4 +127,9 @@
     <string name="menu_profile">Profile</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_logout">Logout</string>
+    <string name="daily_mood">Daily Mood</string>
+    <string name="daily_condition">Daily Condition</string>
+    <string name="image_type_report">Image type report</string>
+    <string name="title_report_condition">You are</string>
+    <string name="title_report_mood">Your Mood This Week </string>
 </resources>

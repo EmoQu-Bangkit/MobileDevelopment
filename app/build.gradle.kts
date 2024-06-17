@@ -38,6 +38,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
     }
 }
 
@@ -47,6 +48,8 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     implementation("androidx.annotation:annotation:1.8.0")
@@ -71,4 +74,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     implementation("com.github.sparrow007:carouselrecyclerview:1.2.6")
     implementation ("androidx.work:work-runtime-ktx:2.9.0")
+    implementation("org.tensorflow:tensorflow-lite-task-text:0.4.4")
+    implementation ("androidx.viewpager2:viewpager2:1.1.0")
+    implementation ("me.relex:circleindicator:2.1.6")
 }

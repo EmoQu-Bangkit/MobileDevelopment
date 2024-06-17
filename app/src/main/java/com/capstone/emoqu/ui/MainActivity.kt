@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
         addFab = findViewById(R.id.fab_add)
         navCard = findViewById(R.id.nav_card)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+//        val toolbar: Toolbar = findViewById(R.id.toolbar)
+//        setSupportActionBar(toolbar)
 
 
         bottomNav.setOnItemSelectedListener { item ->
