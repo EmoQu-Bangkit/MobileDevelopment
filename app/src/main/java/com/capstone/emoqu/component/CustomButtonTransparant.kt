@@ -26,8 +26,5 @@ class CustomButtonTransparant @JvmOverloads constructor(
         setTextColor(txtColor)
         textSize = 14f
         gravity = Gravity.CENTER
-        text = text.toString().capitalizeWords()
     }
-
-    private fun String.capitalizeWords(): String = split(" ").joinToString(" ") { it.capitalize() }
 }
