@@ -24,6 +24,7 @@ import com.capstone.emoqu.databinding.FragmentTodayBinding
 import com.capstone.emoqu.ui.ViewModelFactory
 import com.capstone.emoqu.ui.auth.login.LoginActivity
 import com.capstone.emoqu.ui.detail.DetailActivityFragment
+import com.capstone.emoqu.utils.DateHelper.isToday
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -130,7 +131,9 @@ class TodayFragment : Fragment() {
                         "Data displayed successfully",
                         Toast.LENGTH_SHORT
                     ).show()
-                    val activities = result.data.activities
+                    val activities = result.data.activities.filter { activity ->
+                        isToday(activity.timeStamp)
+                    }
                     activityAdapter.submitList(activities)
                     binding.viewSwitcher.showPrevious()
                 }

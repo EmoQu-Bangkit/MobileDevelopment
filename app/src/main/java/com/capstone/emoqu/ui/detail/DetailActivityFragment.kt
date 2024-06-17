@@ -47,11 +47,11 @@ class DetailActivityFragment : Fragment() {
 
     private fun getMoodIcon(quality: Int): Int {
         return when (quality) {
-            0 -> R.drawable.emoji_terrible
-            1 -> R.drawable.emoji_bad
-            2 -> R.drawable.emoji_okay
-            3 -> R.drawable.emoji_good
-            4 -> R.drawable.emoji_excellent
+            1 -> R.drawable.emoji_terrible
+            2 -> R.drawable.emoji_bad
+            3 -> R.drawable.emoji_okay
+            4 -> R.drawable.emoji_good
+            5 -> R.drawable.emoji_excellent
             else -> R.drawable.emoji_okay
         }
     }

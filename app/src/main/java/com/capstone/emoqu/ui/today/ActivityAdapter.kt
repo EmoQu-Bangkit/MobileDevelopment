@@ -43,22 +43,22 @@ class ActivityAdapter : ListAdapter<Activity, ActivityAdapter.ActivityViewHolder
 
         private fun getMoodIcon(quality: Int): Int {
             return when (quality) {
-                0 -> R.drawable.emoji_terrible
-                1 -> R.drawable.emoji_bad
-                2 -> R.drawable.emoji_okay
-                3 -> R.drawable.emoji_good
-                4 -> R.drawable.emoji_excellent
+                1 -> R.drawable.emoji_terrible
+                2 -> R.drawable.emoji_bad
+                3 -> R.drawable.emoji_okay
+                4 -> R.drawable.emoji_good
+                5 -> R.drawable.emoji_excellent
                 else -> R.drawable.emoji_okay
             }
         }
 
         private fun getMoodText(quality: Int): String {
             return when (quality) {
-                0 -> "Terrible"
-                1 -> "Bad"
-                2 -> "Okay"
-                3 -> "Good"
-                4 -> "Excellent"
+                1 -> "Terrible"
+                2 -> "Bad"
+                3 -> "Okay"
+                4 -> "Good"
+                5 -> "Excellent"
                 else -> "Unknown"
             }
         }
