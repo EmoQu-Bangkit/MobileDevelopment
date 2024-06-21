@@ -7,7 +7,9 @@ The MD division consists of:
 - Galang Priyohutomo (A200D4KY3996)
 
 
-## 🛠️ Tech stack & Open-source libraries
+
+
+## Tech stack & Open-source libraries
 <!-- Test -->
 - Minimum SDK level 24
 - Architecture
@@ -22,11 +24,14 @@ Repository Pattern
 - [CircleIndicator](https://github.com/ongakuer/CircleIndicator) : A lightweight indicator like in a ViewPager.
 
 
-## 💡 Design with Figma
+
+## Design with Figma
 <!-- Test -->
 - [Mobile User Interface Design](https://www.figma.com/file/5gnRl5pdbAD3HzFzi132ps/TemanSawit-%7C-Bangkit-Capstone?type=design&node-id=2%3A430&t=WKjh8UlYX8DIFvlz-1)
 
-## 💡 Features
+
+
+## Features
 <!-- Test -->
 EmoQu has three main features:
 - Track Activities, Moods, & Notes
@@ -38,6 +43,8 @@ EmoQu analyzes the tracked data to classify it into various mental and emotional
 - Generate Daily Report
 EmoQu compiles the tracked data and classifications into a comprehensive daily report. The report includes summaries of activities, mood trends, identified conditions, and personalized insights or recommendations. 
 
+
+
 ## Build
 <!-- Test -->
 1. Clone the project
@@ -46,6 +53,8 @@ https://github.com/EmoQu-Bangkit/EmoQuApp.git
 ```
 2. Open the project using Android Studio
 3. Run the app
+
+
 
 ## Contact
 <!-- Test -->
