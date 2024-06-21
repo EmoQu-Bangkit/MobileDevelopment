@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EmoQu" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/light_solid_yellow_9</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/light_solid_yellow_9</item>
+    </style>
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:textColorSecondary">@color/light_solid_yellow_9</item>
+    </style>
+
+
+    <style name="Theme.EmoQu" parent="Base.Theme.EmoQu" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.Material3.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.Material3" />
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_today"
+        android:icon="@drawable/ic_menu_today"
+        android:title="@string/menu_today" />
+
+    <item
+        android:id="@+id/bottom_add"
+        android:title="@string/menu_add"
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/bottom_report"
+        android:icon="@drawable/ic_menu_report"
+        android:title="@string/menu_report"/>
+</menu>

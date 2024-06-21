@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Color -->
+    <!-- Background Colors -->
+    <color name="light_background_main">#FFFFFFFF</color>
+    <color name="light_background_yellow_1">#FDFDFA</color>
+    <color name="light_background_yellow_2">#FFFBE9</color>
+    <color name="light_background_grey_1">#FCFCFD</color>
+    <color name="light_background_grey_2">#F9F9FB</color>
+
+    <!-- Component Colors -->
+    <color name="light_component_yellow_3">#FFF7BC</color>
+    <color name="light_component_yellow_4">#FFEF97</color>
+    <color name="light_component_yellow_5">#FEE673</color>
+    <color name="light_component_grey_3">#EFF0F3</color>
+    <color name="light_component_grey_4">#E7E8EC</color>
+    <color name="light_component_grey_5">#E0E1E6</color>
+
+    <!-- Border Colors -->
+    <color name="light_border_yellow_6">#EFD86F</color>
+    <color name="light_border_yellow_7">#DDC866</color>
+    <color name="light_border_yellow_8">#CAB238</color>
+    <color name="light_border_grey_6">#D8D9E0</color>
+    <color name="light_border_grey_7">#CDCED7</color>
+    <color name="light_border_grey_8">#B9BBC6</color>
+
+    <!-- Solid Colors -->
+    <color name="light_solid_yellow_9">#FCD900</color>
+    <color name="light_solid_yellow_10">#EFCF14</color>
+    <color name="light_solid_grey_9">#8B8D98</color>
+    <color name="light_solid_grey_10">#80828D</color>
+
+    <!-- Text Colors -->
+    <color name="light_text_yellow_11">#8D7700</color>
+    <color name="light_text_yellow_12">#423C1F</color>
+    <color name="light_text_grey_11">#62636C</color>
+    <color name="light_text_grey_12">#1E1F24</color>
+
+</resources>

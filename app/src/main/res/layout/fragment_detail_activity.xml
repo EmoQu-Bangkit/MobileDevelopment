@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background_main"
+    android:paddingVertical="36dp"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.detail.DetailActivityFragment"
+    android:focusableInTouchMode="true">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/back_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Timestamp and Time TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_text_grey_12"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="24dp"
+                    tools:text="Time"/>
+
+                <TextView
+                    android:id="@+id/tv_time_stamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_text_grey_12"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="8dp"
+                    tools:text="Time Stamp"/>
+
+            </LinearLayout>
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/iv_mood_image"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                tools:src="@drawable/emoji_bad"
+                android:contentDescription="@string/mood" />
+
+            <!-- TextView for Activity Question -->
+            <TextView
+                android:id="@+id/tv_activity_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:text="@string/activity_question"
+                android:textSize="16sp"
+                android:textColor="@color/light_text_grey_12"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- TextView for Activities -->
+            <TextView
+                android:id="@+id/tv_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:text="@string/activities"
+                android:textSize="14sp"
+                android:textColor="@color/light_text_grey_12" />
+
+            <!-- TextView for Activity Text -->
+            <TextView
+                android:id="@+id/tv_activity_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_background"
+                android:textColor="@color/light_text_grey_12"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginTop="4dp"
+                tools:text="@string/activity_label"
+                tools:ignore="Autofill,LabelFor" />
+
+            <!-- TextView for Duration -->
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="1"
+                android:text="@string/duration"
+                android:textSize="14sp"
+                android:textColor="@color/light_text_grey_12" />
+
+            <!-- TextView for Duration Text -->
+            <TextView
+                android:id="@+id/tv_duration_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_background"
+                android:textColor="@color/light_text_grey_12"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginTop="4dp"
+                tools:text="@string/duration_label"
+                tools:ignore="Autofill,LabelFor" />
+
+            <!-- TextView for Notes -->
+            <TextView
+                android:id="@+id/tv_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="1"
+                android:text="@string/notes"
+                android:textSize="14sp"
+                android:textColor="@color/light_text_grey_12" />
+
+            <!-- TextView for Notes Text -->
+            <TextView
+                android:id="@+id/tv_notes_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_background"
+                android:textColor="@color/light_text_grey_12"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginTop="4dp"
+                android:singleLine="false"
+                android:minLines="3"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+                android:gravity="start|top"
+                tools:text="@string/notes"
+                tools:ignore="Autofill,LabelFor" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_mood_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        tools:text="@string/bad_label"/>
+
+    <com.jackandphantom.carouselrecyclerview.view.ReflectionImageView
+        android:id="@+id/iv_mood_image"
+        android:layout_width="90dp"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        tools:src="@drawable/emoji_bad"/>
+
+</LinearLayout>

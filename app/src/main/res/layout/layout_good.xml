@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="48dp"
+    android:paddingHorizontal="16dp"
+    android:background="#B8F8F0"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/light_text_grey_12"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/your_daily_mood"/>
+
+    <TextView
+        android:id="@+id/tv_type_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textColor="@color/light_text_grey_12"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/good"/>
+
+    <ImageView
+        android:id="@+id/iv_type_report"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:layout_marginVertical="60dp"
+        android:contentDescription="@string/image_type_report"
+        android:src="@drawable/emoji_good"/>
+
+    <TextView
+        android:id="@+id/tv_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/light_text_grey_12"
+        android:gravity="center"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/good_mood"/>
+
+
+</LinearLayout>

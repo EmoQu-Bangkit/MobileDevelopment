@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background_main"
+    android:paddingTop="48dp"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.auth.register.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/register_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.auth.login.LoginActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_indicator"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:text="@string/welcome_app"
+        android:textColor="@color/light_text_grey_12"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tv_slogan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:alpha="1"
+        android:text="@string/slogan"
+        android:textColor="@color/light_text_grey_12"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_register"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_slogan"
+        tools:ignore="MissingConstraints"
+        tools:src="@drawable/register" />
+
+    <TextView
+        android:id="@+id/tv_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:alpha="1"
+        android:text="@string/first_name"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_grey_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_register" />
+
+    <com.capstone.emoqu.component.CustomEditText
+        android:id="@+id/ed_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        android:hint="@string/first_name"
+        android:background="@drawable/tv_background"
+        app:layout_constraintTop_toBottomOf="@+id/tv_first_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:alpha="1"
+        android:text="@string/last_name"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_grey_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_first_name" />
+
+    <com.capstone.emoqu.component.CustomEditText
+        android:id="@+id/ed_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        android:hint="@string/last_name"
+        android:background="@drawable/tv_background"
+        app:layout_constraintTop_toBottomOf="@+id/tv_last_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:alpha="1"
+        android:text="@string/email"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_grey_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_last_name" />
+
+    <com.capstone.emoqu.component.EditTextEmail
+        android:id="@+id/ed_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        android:background="@drawable/tv_background"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:alpha="1"
+        android:text="@string/password"
+        android:textSize="14sp"
+        android:textColor="@color/light_text_grey_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_email" />
+
+    <com.capstone.emoqu.component.EditTextPassword
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        android:background="@drawable/tv_background"
+        android:hint="@string/password"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password"
+        tools:ignore="MissingConstraints" />
+
+    <com.capstone.emoqu.component.CustomButton
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/register"
+        android:textSize="14sp"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/ed_password"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_register_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp"
+        android:alpha="1"
+        android:text="@string/login_question"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/light_text_grey_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
