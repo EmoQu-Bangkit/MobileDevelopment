@@ -24,7 +24,7 @@ Repository Pattern
 
 ## 💡 Design with Figma
 <!-- Test -->
-- [Mobile Design](https://www.figma.com/file/5gnRl5pdbAD3HzFzi132ps/TemanSawit-%7C-Bangkit-Capstone?type=design&node-id=2%3A430&t=WKjh8UlYX8DIFvlz-1)
+- [Mobile User Interface Design](https://www.figma.com/file/5gnRl5pdbAD3HzFzi132ps/TemanSawit-%7C-Bangkit-Capstone?type=design&node-id=2%3A430&t=WKjh8UlYX8DIFvlz-1)
 
 ## 💡 Features
 <!-- Test -->
